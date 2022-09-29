@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/_rocket.scss';
 
 const SECONDS_TO_TAKEOFF = 5;
@@ -19,6 +19,7 @@ function generateEmptyListEls(quantity) {
 }
 
 export default function RocketCore({ initialLaunchTime }) {
+  console.log("Rerenders");
   return (
     <>
       <div className="rocket" style={{ bottom: timeToPositionPercent(initialLaunchTime) }}>

@@ -3,10 +3,15 @@ import { ClassRocket, FunctionalRocket } from './Rocket';
 import '../styles/_launchpad.scss';
 
 export default function LaunchPad() {
-  const [, triggerRerender] = useState(Date.now());
+  // const [render, triggerRerender] = useState(Date.now());
+  // const [firstTime, setFirstTime] = useState(true);
+
   
   useEffect(() => {
-    setInterval(() => { triggerRerender(Date.now()); }, 500);
+    // if (firstTime) {
+    //   setInterval(() => { triggerRerender(Date.now()); }, 500);
+    //   setFirstTime(false)
+    // } 
   }, [])
   
   return (
